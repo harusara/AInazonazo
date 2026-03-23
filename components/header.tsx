@@ -1,7 +1,13 @@
+"use client"
+
 import Link from "next/link"
 import { Sparkles } from "lucide-react"
 
 export function Header() {
+  const showPreparingPopup = () => {
+    window.alert("準備中")
+  }
+
   return (
     <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
       <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
@@ -20,18 +26,20 @@ export function Header() {
           >
             ホーム
           </Link>
-          <Link
-            href="#"
+          <button
+            type="button"
+            onClick={showPreparingPopup}
             className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
           >
             カテゴリ
-          </Link>
-          <Link
-            href="#"
+          </button>
+          <button
+            type="button"
+            onClick={showPreparingPopup}
             className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
           >
             ランキング
-          </Link>
+          </button>
         </nav>
       </div>
     </header>

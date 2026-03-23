@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { ArrowLeft, Lightbulb, Eye, Sparkles } from "lucide-react"
@@ -11,18 +11,23 @@ interface RiddleDetailProps {
   riddle: Riddle
 }
 
-const answerImages: Record<string, string> = {
-  "1": "https://images.unsplash.com/photo-1585515320310-259814833e62?w=400&h=300&fit=crop",
-  "2": "https://images.unsplash.com/photo-1556656793-08538906a9f8?w=400&h=300&fit=crop",
-  "3": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop",
-  "4": "https://images.unsplash.com/photo-1607153333879-c174d265f1d2?w=400&h=300&fit=crop",
-  "5": "https://images.unsplash.com/photo-1548839140-29a749e1cf4d?w=400&h=300&fit=crop",
-  "6": "https://images.unsplash.com/photo-1568029591857-01f9a41c8b3a?w=400&h=300&fit=crop",
-}
-
 export function RiddleDetail({ riddle }: RiddleDetailProps) {
   const [showHint, setShowHint] = useState(false)
   const [showAnswer, setShowAnswer] = useState(false)
+  const [imageExtensionIndex, setImageExtensionIndex] = useState(0)
+
+  const localImageExtensions = ["webp", "png", "jpg", "jpeg", "gif"]
+  const isUsingLocalImage = imageExtensionIndex < localImageExtensions.length
+  const imageSrc = isUsingLocalImage
+    ? `/riddle-images/${riddle.id}.${localImageExtensions[imageExtensionIndex]}`
+    : "/riddle-images/answer.png"
+
+  useEffect(() => {
+    if (showAnswer) {
+      // 答え表示を開いたタイミングでローカル画像探索を最初からやり直す
+      setImageExtensionIndex(0)
+    }
+  }, [riddle.id, showAnswer])
 
   return (
     <div className="min-h-screen bg-background">
@@ -91,10 +96,15 @@ export function RiddleDetail({ riddle }: RiddleDetailProps) {
                 <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
                   <div className="relative aspect-video rounded-2xl overflow-hidden mb-6 bg-muted">
                     <Image
-                      src={answerImages[riddle.id] || "https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=300&fit=crop"}
+                      src={imageSrc}
                       alt={riddle.answer}
                       fill
                       className="object-cover"
+                      onError={() => {
+                        if (isUsingLocalImage) {
+                          setImageExtensionIndex((prev) => prev + 1)
+                        }
+                      }}
                     />
                   </div>
                   
