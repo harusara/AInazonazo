@@ -123,6 +123,9 @@ export function RiddleDetail({ riddle }: RiddleDetailProps) {
                     <p className="text-2xl md:text-3xl font-bold text-foreground">
                       {riddle.answer}
                     </p>
+                    {riddle.message && (
+                      <p className="mt-4 text-sm text-muted-foreground">{riddle.message}</p>
+                    )}
                   </div>
 
                   <div className="mt-8 flex flex-col sm:flex-row gap-4">

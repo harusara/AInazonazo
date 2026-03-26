@@ -4,6 +4,7 @@ export interface Riddle {
   answer: string
   hint?: string
   category?: string
+  message?: string
 }
 
 export const riddles: Riddle[] = [
@@ -13,6 +14,7 @@ export const riddles: Riddle[] = [
     answer: "フライパン",
     hint: "お料理に使うよ",
     category: "定番",
+    message: "いやパンって言ってるのに調理器具はズルくない？笑",
   },
   {
     id: "2",
@@ -20,6 +22,7 @@ export const riddles: Riddle[] = [
     answer: "電話",
     hint: "おしゃべりするときに使うよ",
     category: "定番",
+    message: "たしかに“かける”けどそっちかいってなるやつ",
   },
   {
     id: "3",
@@ -27,6 +30,7 @@ export const riddles: Riddle[] = [
     answer: "お風呂",
     hint: "キャンセルしないでね",
     category: "定番",
+    message: "言われてみればそうなんだけど納得いかない感すごい",
   },
   {
     id: "4",
@@ -34,6 +38,7 @@ export const riddles: Riddle[] = [
     answer: "イルカ（逆さにすると「カルイ」）",
     hint: "海の生き物だよ",
     category: "言葉遊び",
+    message: "逆さ読み系、気づいたらちょっと気持ちいいよね",
   },
   {
     id: "5",
@@ -41,6 +46,7 @@ export const riddles: Riddle[] = [
     answer: "水",
     hint: "透明で飲めるよ",
     category: "定番",
+    message: "切ってるつもりでも切れてない代表格",
   },
   {
     id: "6",
@@ -48,6 +54,7 @@ export const riddles: Riddle[] = [
     answer: "テントウムシ（怒っている）",
     hint: "赤くて黒い点々があるよ",
     category: "言葉遊び",
+    message: "怒ってる扱いされるテントウムシかわいそう笑",
   },
   {
     id: "7",
@@ -55,6 +62,7 @@ export const riddles: Riddle[] = [
     answer: "炭",
     hint: "火を使うよ",
     category: "定番",
+    message: "黒→赤のギャップ、意外とドラマあるよね",
   },
   {
     id: "8",
@@ -62,6 +70,7 @@ export const riddles: Riddle[] = [
     answer: "パン（逆さにすると「ンパ」→軽い音のイメージ）",
     hint: "カタカナで考えてみよう",
     category: "言葉遊び",
+    message: "これはちょっと強引すぎて逆に好きかも",
   },
   {
     id: "9",
@@ -69,6 +78,7 @@ export const riddles: Riddle[] = [
     answer: "空気",
     hint: "目には見えないよ",
     category: "定番",
+    message: "そもそも切るって何ってなるやつ",
   },
   {
     id: "10",
@@ -76,6 +86,7 @@ export const riddles: Riddle[] = [
     answer: "コーラ（授業中に飲むと怒られる）",
     hint: "学校でよく言われる",
     category: "ひっかけ",
+    message: "状況限定すぎて納得するしかないやつ",
   },
   {
     id: "11",
@@ -83,6 +94,7 @@ export const riddles: Riddle[] = [
     answer: "時計",
     hint: "時間に関係ある",
     category: "定番",
+    message: "ずっと働いてるのに疲れないとか最強すぎる",
   },
   {
     id: "12",
@@ -90,6 +102,7 @@ export const riddles: Riddle[] = [
     answer: "音",
     hint: "拍手する時を想像して",
     category: "定番",
+    message: "叩くほど増えるって冷静に考えると面白いよね",
   },
   {
     id: "13",
@@ -97,6 +110,7 @@ export const riddles: Riddle[] = [
     answer: "気温",
     hint: "階段じゃないよ",
     category: "ひっかけ",
+    message: "物理的な高さじゃないのがミソだったね",
   },
   {
     id: "14",
@@ -104,6 +118,7 @@ export const riddles: Riddle[] = [
     answer: "コップ",
     hint: "毎日使うもの",
     category: "定番",
+    message: "口あるのに食べない代表、意外と多い説",
   },
   {
     id: "15",
@@ -111,6 +126,7 @@ export const riddles: Riddle[] = [
     answer: "結婚式場",
     hint: "ちょっとロマンある",
     category: "ひっかけ",
+    message: "これはちょっとロマン補正入ってるな笑",
   },
   {
     id: "16",
@@ -118,6 +134,7 @@ export const riddles: Riddle[] = [
     answer: "パスワード",
     hint: "スマホでも使う",
     category: "ひっかけ",
+    message: "開かないのに入れるって発想がもうズルい",
   },
   {
     id: "17",
@@ -125,6 +142,7 @@ export const riddles: Riddle[] = [
     answer: "人間",
     hint: "赤ちゃん→大人→お年寄り",
     category: "定番",
+    message: "有名だけど毎回ちょっと感心するやつ",
   },
   {
     id: "18",
@@ -132,6 +150,7 @@ export const riddles: Riddle[] = [
     answer: "ゾウ（冷ゾウ庫）",
     hint: "言葉を分けてみて",
     category: "言葉遊び",
+    message: "冷ゾウ庫は反則級のダジャレでしょ笑",
   },
   {
     id: "19",
@@ -139,6 +158,7 @@ export const riddles: Riddle[] = [
     answer: "切手",
     hint: "手紙に貼るよ",
     category: "ひっかけ",
+    message: "地味にすごい働きしてるやつだった",
   },
   {
     id: "20",
@@ -146,6 +166,7 @@ export const riddles: Riddle[] = [
     answer: "貝（カイ→円の材料）",
     hint: "昔のお金だよ",
     category: "ひっかけ",
+    message: "昔の人の発想、なかなかロマンあるよね",
   },
   {
     id: "21",
@@ -153,6 +174,7 @@ export const riddles: Riddle[] = [
     answer: "砂",
     hint: "足が沈むよ",
     category: "ひっかけ",
+    message: "これは体験するとマジで焦るやつ",
   },
   {
     id: "22",
@@ -160,6 +182,7 @@ export const riddles: Riddle[] = [
     answer: "時間",
     hint: "みんな平等にある",
     category: "定番",
+    message: "使ってる感覚ないのに減るの怖すぎる",
   },
   {
     id: "23",
@@ -167,6 +190,7 @@ export const riddles: Riddle[] = [
     answer: "針",
     hint: "糸を通すよ",
     category: "定番",
+    message: "目があるのに見えない代表、納得しかない",
   },
   {
     id: "24",
@@ -174,6 +198,7 @@ export const riddles: Riddle[] = [
     answer: "体重計",
     hint: "数字を見るよ",
     category: "ひっかけ",
+    message: "軽くなるのは数字だけなんだよなぁ…笑",
   },
   {
     id: "25",
@@ -181,6 +206,7 @@ export const riddles: Riddle[] = [
     answer: "口",
     hint: "無意識にやってるかも",
     category: "ひっかけ",
+    message: "無意識でやってるって言われるとちょっと恥ずかしい",
   },
   {
     id: "26",
@@ -188,6 +214,7 @@ export const riddles: Riddle[] = [
     answer: "汗",
     hint: "運動すると出る",
     category: "定番",
+    message: "頑張った証だけどあんまり嬉しくないやつ",
   },
   {
     id: "27",
@@ -195,6 +222,7 @@ export const riddles: Riddle[] = [
     answer: "塩水",
     hint: "しょっぱいよ",
     category: "ひっかけ",
+    message: "これはやったら後悔するやつ確定",
   },
   {
     id: "28",
@@ -202,6 +230,7 @@ export const riddles: Riddle[] = [
     answer: "目玉（ガラスのように見える）",
     hint: "体の一部",
     category: "ひっかけ",
+    message: "割れないけど守らないと終わるやつ",
   },
   {
     id: "29",
@@ -209,6 +238,7 @@ export const riddles: Riddle[] = [
     answer: "トランプ（カードが増えるように見える）",
     hint: "遊びで使う",
     category: "ひっかけ",
+    message: "増えてるように見えるだけっていうトリック",
   },
   {
     id: "30",
@@ -216,6 +246,7 @@ export const riddles: Riddle[] = [
     answer: "ホットケーキ",
     hint: "温かいよ",
     category: "言葉遊び",
+    message: "安心する理由がシンプルすぎて好き",
   },
   {
     id: "31",
@@ -223,6 +254,7 @@ export const riddles: Riddle[] = [
     answer: "電柱",
     hint: "外にあるよ",
     category: "定番",
+    message: "一番ブラック労働してるの電柱説ある",
   },
   {
     id: "32",
@@ -230,6 +262,7 @@ export const riddles: Riddle[] = [
     answer: "テレビの時間（見ている時間が減る）",
     hint: "時間に関係",
     category: "ひっかけ",
+    message: "見てるだけで減るってちょっと切ないな",
   },
   {
     id: "33",
@@ -237,6 +270,7 @@ export const riddles: Riddle[] = [
     answer: "太鼓",
     hint: "音楽で使う",
     category: "定番",
+    message: "叩かれて喜ぶって珍しいポジション",
   },
   {
     id: "34",
@@ -244,6 +278,7 @@ export const riddles: Riddle[] = [
     answer: "影",
     hint: "光が必要",
     category: "ひっかけ",
+    message: "濡れないのにちゃんとそこにいるの不思議",
   },
   {
     id: "35",
@@ -251,6 +286,7 @@ export const riddles: Riddle[] = [
     answer: "バス（スバ→すば→スバル→ちょいイラ系）",
     hint: "ちょっと強引",
     category: "ひっかけ",
+    message: "これは正直ちょっと無理やりすぎる笑",
   },
   {
     id: "36",
@@ -258,6 +294,7 @@ export const riddles: Riddle[] = [
     answer: "寿命",
     hint: "ちょっと怖い",
     category: "ひっかけ",
+    message: "急に現実突きつけてくるのやめてほしい",
   },
   {
     id: "37",
@@ -265,6 +302,7 @@ export const riddles: Riddle[] = [
     answer: "せんべい",
     hint: "パリパリ",
     category: "定番",
+    message: "この音がいいんだよね、わかる",
   },
   {
     id: "38",
@@ -272,6 +310,7 @@ export const riddles: Riddle[] = [
     answer: "ブーメラン",
     hint: "戻ってくるよ",
     category: "定番",
+    message: "ちゃんと戻ってくるの優秀すぎる",
   },
   {
     id: "39",
@@ -279,6 +318,7 @@ export const riddles: Riddle[] = [
     answer: "机",
     hint: "乗っちゃダメ",
     category: "ひっかけ",
+    message: "そりゃ進まないよねっていう正論パンチ",
   },
   {
     id: "40",
@@ -286,6 +326,7 @@ export const riddles: Riddle[] = [
     answer: "夢",
     hint: "見たことあるよね",
     category: "定番",
+    message: "増えてる気がするだけでも楽しいやつ",
   },
   {
     id: "41",
@@ -293,5 +334,6 @@ export const riddles: Riddle[] = [
     answer: "鉛筆",
     hint: "書くと短くなる",
     category: "定番",
+    message: "地味に最後まで使い切る人少ない説",
   },
 ]
