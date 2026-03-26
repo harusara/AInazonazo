@@ -23,6 +23,16 @@ export function RiddleDetail({ riddle }: RiddleDetailProps) {
     : "/riddle-images/answer.png"
 
   useEffect(() => {
+    try {
+      const viewKey = `riddle_views_${riddle.id}`
+      const currentViews = Number(localStorage.getItem(viewKey) || "0")
+      localStorage.setItem(viewKey, String(currentViews + 1))
+    } catch {
+      // localStorage が使えない環境ではカウントしない
+    }
+  }, [riddle.id])
+
+  useEffect(() => {
     if (showAnswer) {
       // 答え表示を開いたタイミングでローカル画像探索を最初からやり直す
       setImageExtensionIndex(0)

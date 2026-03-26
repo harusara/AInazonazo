@@ -7,8 +7,8 @@ const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'なぞなぞアプリ | 楽しいなぞなぞで頭の体操',
-  description: 'たくさんのなぞなぞを解いて楽しもう！答えを考えて、ヒントを見て、脳を鍛えよう。',
+  title: 'AIなぞなぞで遊ぼう｜ちょっとイラっとする問題たち',
+  description: '一見簡単。でも答えを見ると「は？」ってなる問題もあるかも。イラっとしながら楽しむ脳トレなぞなぞ集。',
   generator: 'v0.app',
   icons: {
     icon: [
