@@ -21,14 +21,13 @@ export default function HomePage() {
             </div>
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 text-balance">
-              楽しいなぞなぞで
+              AIなぞなぞで遊ぼう
               <br />
-              <span className="text-primary">頭の体操</span>をしよう
+              <span className="text-primary">ちょっとイラっとする問題たち</span>
             </h1>
             
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-10 text-pretty">
-              たくさんのなぞなぞを解いて脳を鍛えよう！ヒントも用意しているので、
-              じっくり考えて答えを見つけてね。
+              一見簡単。でも答えを見ると「は？」ってなる問題もあるかも。イラっとしながら楽しむ脳トレなぞなぞ集。
             </p>
             
             <div className="flex flex-wrap justify-center gap-6">
